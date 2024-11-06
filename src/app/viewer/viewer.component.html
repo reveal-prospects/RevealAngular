@@ -1,0 +1,11 @@
+<div class="column-layout group">
+  <div class="row-layout group_1">
+    <p class="text">
+      Select a dashboard to view / edit
+    </p>
+    <igx-simple-combo type="border" [data]="revealServerDashboardNames" valueKey="dashboardFileName" displayKey="dashboardTitle" (selectionChanging)="singleSelectComboSelectionChanging($event)" class="single-select-combo"></igx-simple-combo>
+  </div>
+</div>
+<div class="column-layout group_2">
+  <rv-reveal-view [dashboard]="selectedDashboard" class="reveal-dash-board"></rv-reveal-view>
+</div>
